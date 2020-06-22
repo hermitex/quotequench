@@ -9,7 +9,34 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="overlay">
+        <div class="home-landing">
+            <small class="date"></small>
+
+            <div class="greeting">
+                <h1 class="greet">
+                    Good <span id="yellow">Morning!</span>
+                </h1>
+            </div>
+
+            <div class="time1">
+
+            </div>
+
+            <div class="welcome-tag">
+                <p>
+                    Hey! How is your <span id="yellow-1">Morning?</span>
+                </p>
+                <p id="urge">We got some cool quotes for you!</p>
+            </div>
+            <div>
+                <button class="read-quotes">Read Quotes</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container disappear">
         <div class="header">
             <div class="greeting">
                 <h1 class="greet">
@@ -23,15 +50,18 @@
         </div>
 
         <div class="card">
-            <div class="random-quote">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, mollitia quibusdam, totam
-                    consequuntur
-                    exercitationem quo ut eius corporis pariatur, deleniti omnis laborum ea inventore adipisci. Deleniti
-                    aspernatur dignissimos id iure?
 
+            <div class="random-quote">
+                <div class="quote-info">
+                    <h3 class="total-quotes"></h3>
+                    <span id="rand-index"></span>
+                </div>
+
+                <p>
+                    Click on next to start finding out what your favourites quotes are today
+                </p>
                 <div class="share">
-                    <small>By <span id="first-name">John </span>Doe</small>
+                    <small>By <span id="first-name">John </span> <span id="second-name">Doe</span> </small>
                     <button id="share">Share</button>
                 </div>
 
@@ -40,14 +70,16 @@
                     <li><a href="http://"></a>tw</li>
                     <li><a href="http://"></a>ig</li>
                 </ul>
-                </p>
+
             </div>
 
             <div class="control">
                 <div>
                     <button class="previous">Previous </button>
                 </div>
-
+                <div>
+                    <button id="close">Close </button>
+                </div>
                 <div>
                     <button class="next">Next </button>
                 </div>
@@ -57,7 +89,8 @@
         </div>
 
     </div>
-    <script src="js/app.js" type="application/javascript"></script>
+    <script src="js/app.js" type="module"></script>
+
 </body>
 
 </html>
