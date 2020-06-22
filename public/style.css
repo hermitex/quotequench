@@ -44,6 +44,7 @@ body{
     height: 100%;
     width: 100%;
     margin-top: 2rem;
+    
 }
 .random-quote{
     font-size: 2rem;
@@ -51,7 +52,6 @@ body{
     padding: 1rem;
     border: 1px solid green;
     width: 90%;
-
     margin: 1rem auto 1rem auto;
     border-radius: 0.5rem;
     box-shadow: hsla(200% 50% 57 0.7) 0.1rem 0.1rem 0.1rem 0.1rem;
@@ -61,11 +61,16 @@ body{
 small{
     display: block;
     font-size: 1.2rem;
-    background-color: #0a0a0a;
-    width: 8rem;
+    background-color: #0a0a0a;   
     padding: 0.1rem;
     color: #ffffff;
     border-radius: 5px;
+}
+.share{
+    display: flex;  
+    width: 100%;
+    justify-content: space-between;    
+    padding: 0.1rem;
 }
 #yellow, #first-name{
     color: yellow;
@@ -88,6 +93,7 @@ button{
     color: #ffffff;
     margin: 0.5rem;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 
