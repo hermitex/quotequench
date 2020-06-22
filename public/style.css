@@ -10,7 +10,7 @@ html{
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url('/images/eat-2834549_1920.jpg');
+    background-image: url('../images/eat-2834549_1920.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
