@@ -72,7 +72,8 @@ small{
 }
 .control{
     display: flex;
- 
+    position: fixed;
+    width: 100%;
     justify-content: space-between; 
     z-index: 2;
     bottom: 0;
