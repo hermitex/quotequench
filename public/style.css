@@ -20,12 +20,13 @@ body{
 .header{
     position: fixed;
     display: flex;
+   
     justify-content: space-between;
     z-index: 2;
     color: #ffffff;
     background-color: #0a0a0a;
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.5rem;
     opacity: 0.85;
     border-bottom: 1px solid blue;
 }
