@@ -68,7 +68,7 @@ body{
     padding: 1rem;
     border: 1.2px solid #66D3FA;
     width: 90%;
-    margin: auto ;
+    margin: auto;
     border-radius: 0.5rem;
     box-shadow: hsla(200% 50% 57 0.7) 0.1rem 0.1rem 0.1rem 0.1rem;
     background-color: #c3c3c3;
@@ -156,7 +156,7 @@ button{
     text-align: center;
     margin: 1rem;
 }
-#share, #author{
+#share{
     padding: 0.9rem;
 }
 .none{
