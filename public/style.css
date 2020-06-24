@@ -20,7 +20,7 @@ body{
 .header{
     position: fixed;
     display: flex;
-   
+   padding: 1rem;
     justify-content: space-between;
     z-index: 2;
     color: #ffffff;
@@ -61,7 +61,7 @@ body{
     opacity: 0.85;
     height: 100%;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 3rem;
     
 }
 .random-quote{
