@@ -6,6 +6,7 @@ const welcomeTag = document.querySelector('.welcome-tag #yellow-1');
 const quoteContent = document.querySelector('.random-quote p');
 const firstName = document.querySelector('#first-name');
 const secondName = document.querySelector('#second-name');
+const avatar = document.querySelector('.avatar');
 const prev = document.querySelector('.previous');
 const next = document.querySelector('.next');
 const totalQuotes = document.querySelector('.total-quotes');
@@ -16,6 +17,45 @@ const overlay = document.querySelector('.overlay');
 const currentDate = document.querySelector('.date');
 const close = document.querySelector('#close');
 const urge = document.querySelector('#urge');
+const shareBtn = document.querySelector('#share');
+const shareButtons = document.querySelector('.share-button');
+const closeShare = document.querySelector('#close-share');
+
+// share
+const showShareButtons = () => {
+    if (shareButtons.classList.contains('flex')) {
+        shareButtons.classList.add('none');
+        shareButtons.classList.remove('flex');
+        shareBtn.innerHTML = 'Share';
+        shareBtn.style.backgroundColor = 'green';
+        shareBtn.style.width = 'auto';
+        shareBtn.style.fontWeight = 'normal';
+    } else if (shareButtons.classList.contains('none')) {
+        shareButtons.classList.add('flex');
+        shareButtons.classList.remove('none');
+        shareBtn.innerHTML = 'X';
+        shareBtn.style.backgroundColor = 'red';
+        shareBtn.style.width = '3rem';
+        shareBtn.style.fontWeight = 'bold';
+    }
+};
+
+// close share buttons
+// const closeShareButtons = () => {
+//     if (closeShare.classList.contains('flex')) {
+//         closeShare.classList.add('none');
+//         closeShare.classList.remove('flex');
+//     } else if (closeShare.classList.contains('none')) {
+//         closeShare.classList.add('flex');
+//         closeShare.classList.remove('none');
+//     }
+// }
+
+// create avatar
+let avatarImg = document.createElement('img');
+avatarImg.classList.add('avatar-image');
+avatar.append(avatarImg);
+
 
 const quoteID = [];
 // HOME ACTIVATION
@@ -49,10 +89,32 @@ const greet = time => {
     }
 };
 
+// add date superscript
+const superscript = date => {
+    let dateStr = date.toString();
+    let lastDateChar = parseInt(dateStr[dateStr.length - 1]);
+    if (lastDateChar === 1) {
+        return `${date}st`;
+    } else if (lastDateChar === 2) {
+        return `${date}nd`;
+    } else if (lastDateChar === 3) {
+        return `${date}rd`;
+    } else if (lastDateChar === 4 || lastDateChar === 5 || lastDateChar === 6 || lastDateChar === 7 || lastDateChar === 8) {
+        return `${date}th`;
+    } else if (lastDateChar === 9) {
+        return `${date}nth`;
+    }
+
+};
+
+
 // TIME FUNCTION
 const showTime = () => {
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     const today = new Date();
+    const year = today.getFullYear();
+    const month = months[today.getMonth()];
     const day = weekDays[today.getUTCDay()];
     const hour = today.getHours();
     const minutes = today.getMinutes();
@@ -61,7 +123,8 @@ const showTime = () => {
     greet(hour);
     time.innerHTML = `<h1>${isLessThanTen(hour)} : ${isLessThanTen(minutes)} : <span style="color: green;">${isLessThanTen(seconds)}</span></h1>`;
     time1.innerHTML = `<h1>${isLessThanTen(hour)} : ${isLessThanTen(minutes)} : <span style="color: green;">${isLessThanTen(seconds)}</span></h1>`;
-    currentDate.innerHTML = `${date}<span class="superscript">nd</span> ${day}`;
+    currentDate.innerHTML = `${day}, ${superscript(date)} ${month} ${year}`;
+
     setTimeout(() => showTime(), 1000)
 };
 
@@ -99,7 +162,10 @@ const displayQuote = (quote) => {
 
 //NEXT QUOTE
 const findNextQuote = (index = 0) => {
-    quoteContent.innerHTML = quotes[index].quote;
+    // avatar.backgroundImage = `url(${quotes[index].img})`
+    avatarImg.src = quotes[index].img;
+    avatarImg.alt = quotes[index].authorFirstName;
+    quoteContent.innerHTML = `<span style='font-size: 2.5rem; color: green;'>"</span>${quotes[index].quote}`;
     firstName.innerHTML = quotes[index].authorFirstName;
     if (quotes[index].authorSecondName) {
         secondName.innerHTML = quotes[index].authorSecondName;
@@ -113,7 +179,7 @@ const findNextQuote = (index = 0) => {
 //PREV QUOTE
 const findPrevQuote = (index) => {
     console.log(index)
-    quoteContent.innerHTML = displayQuote(quotes[index].quote);
+    quoteContent.innerHTML = quotes[index].quote;
     firstName.innerHTML = quotes[index].authorFirstName;
     if (quotes[index].authorSecondName) {
         secondName.innerHTML = quotes[index].authorSecondName;
@@ -123,6 +189,6 @@ const findPrevQuote = (index) => {
 
 next.onclick = findQuote;
 prev.onclick = findQuote;
-
+shareBtn.onclick = showShareButtons;
 
 

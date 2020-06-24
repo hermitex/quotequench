@@ -76,6 +76,22 @@ body{
     background-color: #c3c3c3;
     font-size: 1.5rem;
 }
+.avatar{
+    height: 7rem;
+    width: 7rem;
+    margin: 0 auto;
+}
+.avatar-image{
+    height: 100px;
+    width: 90px;
+    border-radius: 50%;
+    border: 1.5px solid green;
+    cursor: pointer;
+}
+.avatar-image:hover{
+    opacity: 0.5;
+
+}
 .quote-info {
 display: flex;
 background-color: #0a0a0a;
@@ -102,6 +118,10 @@ small{
     justify-content: space-between;    
     padding: 0.1rem;
 }
+#close-share{
+    background-color: red;
+    color: #fff;
+}
 #yellow,#yellow-1, #first-name{
     color: yellow;
 }
@@ -125,9 +145,27 @@ button{
     font-size: 1rem;
     cursor: pointer;
 }
+.share-button{
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 1rem;
+}
+.none{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.share-button li{
+    list-style: none;
+    background-color: green;
+    width: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 .disappear{
-    display: none; 
+   display: none; 
    height: 0;
    z-index: -10;
  
