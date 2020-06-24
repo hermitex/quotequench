@@ -183,7 +183,17 @@ i{
  
 }
 
+@media only screen and (min-width:960px){
+    .random-quote{
+        height: 80vh;
+        font-size: 2rem;
+        line-height: 3rem;      
+    }
+    .random-quote p{
+        margin-bottom: 0.5rem;
+    }
 
+}
 
 
 
