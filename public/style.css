@@ -28,7 +28,7 @@ body{
     width: 100%;
     font-size: 0.5rem;
     opacity: 0.85;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #66D3FA;
 }
 .overlay{
     display: flex;
@@ -162,10 +162,16 @@ button{
 }
 .share-button li{
     list-style: none;
-    background-color: green;
+    background-color: #0a0a0a;
     width: 3rem;
     border-radius: 5px;
     cursor: pointer;
+}
+i{
+    color: #66D3FA;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 .disappear{
