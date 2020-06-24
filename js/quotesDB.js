@@ -78,7 +78,7 @@ export const quotes = [
     },
     {
         id: 12,
-        img: './images/personalities/jim-rohn',
+        img: './images/personalities/jim-rohn.jpg',
         quote: 'Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.',
         authorFirstName: 'John',
         authorSecondName: 'Wooden'
@@ -141,119 +141,119 @@ export const quotes = [
     },
     {
         id: 21,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/ralph-waldo.jpg',
         quote: 'What you do speaks so loudly that I cannot hear what you say.',
         authorFirstName: 'Ralph',
         authorSecondName: 'Waldo Emerson'
     },
     {
         id: 22,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/jimmy-johnson.jpg',
         quote: 'The difference between ordinary and extraordinary is that little extra.',
         authorFirstName: 'Jimmy',
         authorSecondName: 'Johnson'
     },
     {
         id: 23,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/charles-kettering.jpg',
         quote: 'Believe and act as if it were impossible to fail.',
         authorFirstName: 'Charles',
         authorSecondName: 'Kettering'
     },
     {
         id: 24,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/alan-kay.jpg',
         quote: 'The best way to predict the future is to invent it.',
         authorFirstName: 'Alan',
         authorSecondName: 'Kay'
     },
     {
         id: 25,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/rabbi-hillel.jpg',
         quote: 'If I am not for myself, who is for me? And if I am only for myself, what am I? And if not now, when?',
         authorFirstName: 'Rabbi',
         authorSecondName: 'Hillel'
     },
     {
         id: 26,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/confucius.jpg',
         quote: 'Everything has beauty, but not everyone can see.',
         authorFirstName: 'Confucius',
         authorSecondName: ' '
     },
     {
         id: 27,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/President_Roosevelt.jpg',
         quote: 'Believe you can and you’re halfway there.',
         authorFirstName: 'Theodore',
         authorSecondName: 'Roosevelt'
     },
     {
         id: 28,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/ann.jpg',
         quote: 'How wonderful it is that nobody need wait a single moment before starting to improve the world.',
         authorFirstName: 'Anne',
         authorSecondName: 'Frank'
     },
     {
         id: 29,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/albert-einstein.jpg',
         quote: 'Imagination is everything. It is the preview of life’s coming attractions.',
         authorFirstName: 'Albert',
         authorSecondName: 'Einstein'
     },
     {
         id: 30,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/norman.jpg',
         quote: 'Change your thoughts and you change your world.',
         authorFirstName: 'Norman',
         authorSecondName: 'Vincent'
     },
     {
         id: 31,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/dalai.jpg',
         quote: 'Happiness is not something ready made. It comes from your own actions.',
         authorFirstName: 'Dalai',
         authorSecondName: 'Lama'
     },
     {
         id: 32,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/roy.jpg',
         quote: 'Remember that happiness is a way of travel, not a destination.',
         authorFirstName: 'Roy',
         authorSecondName: 'M. Goodman'
     },
     {
         id: 33,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/les.jpg',
         quote: 'Too many of us are not living our dreams because we are living our fears.',
         authorFirstName: 'Les',
         authorSecondName: 'Brown'
     },
     {
         id: 34,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/booker.jpg',
         quote: 'If you want to lift yourself up, lift up someone else.',
         authorFirstName: 'Booker',
         authorSecondName: 'T. Washington'
     },
     {
         id: 35,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/wayne.jpg',
         quote: 'You miss 100% of the shots you don’t take.',
         authorFirstName: 'Wayne',
         authorSecondName: 'Gretzky'
     },
     {
         id: 36,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/george.jpg',
         quote: 'It is never too late to be what you might have been.',
         authorFirstName: 'George',
         authorSecondName: 'Eliot'
     },
     {
         id: 37,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/albert-einstein.jpg',
         quote: 'A person who never made a mistake never tried anything new.',
         authorFirstName: 'Albert',
         authorSecondName: 'Einstein'
@@ -267,91 +267,91 @@ export const quotes = [
     },
     {
         id: 39,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/eleanor.jpg',
         quote: 'Great minds discuss ideas; average minds discuss events; small minds discuss people.',
         authorFirstName: 'Eleanor',
         authorSecondName: 'Roosevelt'
     },
     {
         id: 40,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/mae.jpg',
         quote: 'You only live once, but if you do it right, once is enough.',
         authorFirstName: 'Mae',
         authorSecondName: 'West'
     },
     {
         id: 41,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/mark-twain.jpg',
         quote: 'If you tell the truth, you don’t have to remember anything.',
         authorFirstName: 'Mark',
         authorSecondName: 'Twain'
     },
     {
         id: 42,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/helen.jpg',
         quote: 'The only thing worse than being blind is having sight but no vision.',
         authorFirstName: 'Helen',
         authorSecondName: 'Keller'
     },
     {
         id: 43,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/President_Roosevelt.jpg',
         quote: 'The only thing we have to fear is fear itself.',
         authorFirstName: 'Franklin',
         authorSecondName: 'D. Roosevelt'
     },
     {
         id: 44,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/oscar-wilde.jpg',
         quote: 'To live is the rarest thing in the world. Most people exist, that is all.',
         authorFirstName: 'Oscar',
         authorSecondName: 'Wilde'
     },
     {
         id: 45,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/martin.jpg',
         quote: 'Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.',
         authorFirstName: 'Martin',
         authorSecondName: 'Luther King, Jr.'
     },
     {
         id: 46,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/oprah.jpg',
         quote: 'If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough.',
         authorFirstName: 'Oprah',
         authorSecondName: 'Winfrey'
     },
     {
         id: 47,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/eleanor.jpg',
         quote: 'Remember no one can make you feel inferior without your consent.',
         authorFirstName: 'Eleanor',
         authorSecondName: 'Roosevelt'
     },
     {
         id: 48,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/ralph-waldo.jpg',
         quote: 'For every minute you are angry you lose sixty seconds of happiness.',
         authorFirstName: 'Ralph',
         authorSecondName: 'Waldo Emerson'
     },
     {
         id: 49,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/lao-tzu.jpg',
         quote: 'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
         authorFirstName: 'Lao',
         authorSecondName: 'Tzu'
     },
     {
         id: 50,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/edith.jpg',
         quote: 'There are two ways of spreading light: to be the candle or the mirror that reflects it.',
         authorFirstName: 'Edith',
         authorSecondName: 'Wharton'
     },
     {
         id: 51,
-        img: './images/personalities/mahatma-gandhi.jpg',
+        img: './images/personalities/colin.jpg',
         quote: 'The road to success and the road to failure are almost exactly the same.',
         authorFirstName: 'Colin',
         authorSecondName: 'R. Davis'
