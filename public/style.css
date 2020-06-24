@@ -66,15 +66,15 @@ body{
     font-size: 2rem;
     line-height: 1.5rem;
     padding: 1rem;
-    border: 1px solid green;
+    border: 1.2px solid #66D3FA;
     width: 90%;
     margin: auto ;
     border-radius: 0.5rem;
     box-shadow: hsla(200% 50% 57 0.7) 0.1rem 0.1rem 0.1rem 0.1rem;
     background-color: #c3c3c3;
     font-size: 1rem;
-   
-   
+    font-family: 'Montserrat Alternates', sans-serif;
+   color: #0a0a0a;
 }
 .avatar{
     height: 7rem;
@@ -85,7 +85,7 @@ body{
     height: 100px;
     width: 90px;
     border-radius: 50%;
-    border: 1.5px solid green;
+    border: 1.5px solid #66D3FA;
     cursor: pointer;
     margin-top: 0.5rem;
     
@@ -141,9 +141,10 @@ small{
 
 button{   
     background-color: green;
+    opacity: 0.95;
     padding: 0.3rem;
     outline: none;
-    border: none;
+    border: 1px solid #66D3FA;
     border-radius: 0.5rem;
     color: #ffffff;
     margin: 0.5rem;
