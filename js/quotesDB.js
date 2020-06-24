@@ -331,273 +331,273 @@ export const quotes = [
     },
     {
         id: 56,
-        quote: 'Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.',
-        authorFirstName: 'Carl',
-        authorSecondName: 'Bard'
-    },
-    {
-        id: 57,
         quote: 'Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young.',
         authorFirstName: 'Henry',
         authorSecondName: 'Ford'
     },
     {
-        id: 58,
+        id: 57,
         quote: 'He who angers you conquers you.',
-        authorFirstName: 'Elizabeth ',
+        authorFirstName: 'Elizabeth',
         authorSecondName: 'Kenny'
     },
     {
-        id: 59,
+        id: 58,
         quote: 'Beauty, without expression, tires.',
         authorFirstName: 'Ralph',
         authorSecondName: 'Waldo Emerson'
     },
     {
+        id: 59,
+        quote: 'The secret of business is to know something that nobody else knows.',
+        authorFirstName: 'Aristotle',
+        authorSecondName: 'Onassis'
+    },
+    {
         id: 60,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'The greatest discovery of all time is that a person can change his future by merely changing his attitude.',
+        authorFirstName: 'Oprah',
+        authorSecondName: 'Winfrey'
     },
     {
         id: 61,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'We cannot always build the future of our youth, but we can build our youth for the future.',
+        authorFirstName: 'Franklin',
+        authorSecondName: 'D. Roosevelt'
     },
     {
         id: 62,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'It takes courage to grow up and turn out to be who you really are.',
+        authorFirstName: 'E.E.',
+        authorSecondName: 'Cummings'
     },
     {
         id: 63,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'In this world nothing can be said to be certain, except death and taxes.',
+        authorFirstName: 'Benjamin',
+        authorSecondName: 'Franklin'
     },
     {
         id: 64,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'It is the mark of an educated mind to be able to entertain a thought without accepting it.',
+        authorFirstName: 'Aristotle',
+        authorSecondName: ' '
     },
     {
         id: 65,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'A happy family is but an earlier heaven.',
+        authorFirstName: ' George',
+        authorSecondName: 'Bernard Shaw'
     },
     {
         id: 66,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Don’t walk in front of me, I may not follow. Don’t walk behind me, I may not lead. Walk beside me and be my friend.',
+        authorFirstName: 'Albert',
+        authorSecondName: 'Camus'
     },
     {
         id: 67,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Courage doesn’t always roar. Sometimes courage is the little voice at the end of the day that says ‘I’ll try again tomorrow.',
+        authorFirstName: 'Mary',
+        authorSecondName: 'Anne Radmacher'
     },
     {
         id: 68,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Education is like a double-edged sword. It may be turned to dangerous uses if it is not properly handled.',
+        authorFirstName: 'Wu',
+        authorSecondName: 'Ting-Fang'
     },
     {
         id: 69,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Walking with a friend in the dark is better than walking alone in the light.',
+        authorFirstName: 'Helen',
+        authorSecondName: 'Keller'
     },
     {
         id: 70,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Happiness is not a goal; it is a by-product.',
+        authorFirstName: 'Eleanor',
+        authorSecondName: 'Roosevelt'
     },
     {
         id: 71,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Always forgive your enemies; nothing annoys them so much.',
+        authorFirstName: 'Oscar',
+        authorSecondName: 'Wilde'
     },
     {
         id: 72,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'As a well-spent day brings happy sleep, so a life well spent brings happy death.',
+        authorFirstName: 'Leonardo',
+        authorSecondName: 'da Vinci'
     },
     {
         id: 73,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Children are our most valuable resource.',
+        authorFirstName: 'Herbert',
+        authorSecondName: 'Hoover'
     },
     {
         id: 74,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Love is, above all else, the gift of oneself.',
+        authorFirstName: 'Jean',
+        authorSecondName: 'Anouilh'
     },
     {
         id: 75,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Music in the soul can be heard by the universe.',
+        authorFirstName: 'Lao',
+        authorSecondName: 'Tzu'
     },
     {
         id: 76,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Peace begins with a smile.',
+        authorFirstName: 'Mother',
+        authorSecondName: 'Teresa'
     },
     {
         id: 77,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Success is liking yourself, liking what you do, and liking how you do it.',
+        authorFirstName: 'Maya',
+        authorSecondName: 'Angelou'
     },
     {
         id: 78,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'The only true wisdom is knowing that you know nothing.',
+        authorFirstName: 'Socrates',
+        authorSecondName: ' '
     },
     {
         id: 79,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Courage is what it takes to stand up and speak. Courage is also what it takes to sit down and listen.',
+        authorFirstName: 'Winston',
+        authorSecondName: 'Churchill'
     },
     {
         id: 80,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'A friend is someone who knows all about you and still loves you.',
+        authorFirstName: 'Elbert',
+        authorSecondName: 'Hubbard'
     },
     {
         id: 81,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Never leave that till tomorrow which you can do today.',
+        authorFirstName: 'Benjamin',
+        authorSecondName: 'Franklin'
     },
     {
         id: 82,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'If you don’t make mistakes, you’re not working on hard enough problems.',
+        authorFirstName: 'Frank',
+        authorSecondName: 'Wilczek'
     },
     {
         id: 83,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'We must learn to live together as brothers or perish together as fools.',
+        authorFirstName: 'Martin',
+        authorSecondName: 'Luther King, Jr.'
     },
     {
         id: 84,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Life is like a camera. Just focus on what’s important, capture the good times, develop from the negatives, and if things don’t work out, just take another shot.',
+        authorFirstName: 'Unknown',
+        authorSecondName: ' '
     },
     {
         id: 85,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'When you judge another, you do not define them; you define yourself.',
+        authorFirstName: 'Wayne',
+        authorSecondName: 'Dyer'
     },
     {
         id: 86,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Opportunity is missed by most people because it is dressed in overalls and looks like work.',
+        authorFirstName: 'Thomas',
+        authorSecondName: 'Edison'
     },
     {
         id: 87,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Love me when I least deserve it, because that’s when I really need it.',
+        authorFirstName: 'Swedish',
+        authorSecondName: 'Proverb'
     },
     {
         id: 88,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'The best and most beautiful things in the world cannot be seen or even touched. They must be felt with the heart.',
+        authorFirstName: 'Helen',
+        authorSecondName: 'Keller'
     },
     {
         id: 89,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'If you want to test your memory, try to recall what you were worrying about one year ago today.',
+        authorFirstName: 'E. Joseph',
+        authorSecondName: 'Cossman'
     },
     {
         id: 90,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'The real opportunity for success lies within the person and not in the job.',
+        authorFirstName: 'Zig',
+        authorSecondName: 'Ziglar'
     },
     {
         id: 91,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'It takes a great deal of courage to stand up to your enemies, but even more to stand up to your friends.',
+        authorFirstName: ' J. K.',
+        authorSecondName: 'Rowling'
     },
     {
         id: 92,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Defeat is not bitter unless you swallow it.',
+        authorFirstName: 'Joe',
+        authorSecondName: 'Clark'
     },
     {
         id: 93,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'A mind is like a parachute. It doesn’t work if it isn’t open.',
+        authorFirstName: 'Frank',
+        authorSecondName: 'Zappa'
     },
     {
         id: 94,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'The man who removes a mountain begins by carrying away small stones.',
+        authorFirstName: 'Chinese',
+        authorSecondName: 'Proverbs'
     },
     {
         id: 95,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'When you are totally at peace with yourself, nothing can shake you.',
+        authorFirstName: 'Deepam',
+        authorSecondName: 'Chatterjee'
     },
     {
         id: 96,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Be a first rate version of yourself, not a second rate version of someone else.',
+        authorFirstName: 'Judy',
+        authorSecondName: 'Garland'
     },
     {
         id: 97,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Your worth consists in what you are and not in what you have.',
+        authorFirstName: 'Thomas',
+        authorSecondName: 'Edison'
     },
     {
         id: 98,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Others can stop you temporarily – you are the only one who can do it permanently.',
+        authorFirstName: 'Zig',
+        authorSecondName: 'Ziglar'
     },
     {
         id: 99,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Life has no limitations, except the ones you make.',
+        authorFirstName: 'Les',
+        authorSecondName: 'Brown'
     },
     {
         id: 100,
-        quote: 'Life shrinks or expands in proportion to one’s courage.',
-        authorFirstName: 'Anais',
-        authorSecondName: 'Nin'
+        quote: 'Peace comes from within. Do not seek it without.',
+        authorFirstName: 'Muhammad',
+        authorSecondName: 'Ali'
     }
 ];
 
