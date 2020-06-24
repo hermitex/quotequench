@@ -207,6 +207,11 @@ i{
        padding: 0.5rem;
        font-size: 1.2rem;
     }
+   .home-landing div{
+ 
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
 
 }
 
