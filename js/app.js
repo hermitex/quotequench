@@ -16,7 +16,8 @@ const overlay = document.querySelector('.overlay');
 const currentDate = document.querySelector('.date');
 const close = document.querySelector('#close');
 const urge = document.querySelector('#urge');
-console.log(close)
+
+const quoteID = [];
 // HOME ACTIVATION
 landing.addEventListener('click', () => {
     if (!overlay.classList.contains('disappear')) {
@@ -36,7 +37,7 @@ close.addEventListener('click', () => {
 // GREETING FUNCTION
 const greet = time => {
     parseInt(time);
-    if (time >= 0 && time <= 12) {
+    if (time >= 0 && time <= 11) {
         greeting.innerHTML = 'Morning!';
         greeting.innerHTML = 'Morning!';
     } else if (time >= 12 && time <= 16) {
@@ -78,30 +79,45 @@ const quoteIndex = () => Math.floor(Math.random() * quotes.length);
 //QUOTE FILTER
 const findQuote = (event) => {
     const index = quoteIndex();
+    quoteID.push(index);
+
     if (event.target.classList.contains('next')) {
         findNextQuote(index)
     }
     else if (event.target.classList.contains('previous')) {
-        findPrevQuote(index - 1)
+        findPrevQuote(index)
     }
+};
+// DISPLAY QUOTE
+const displayQuote = (quote) => {
+    let quoteArr = quote.trim().split(' ');
+    return quoteArr.forEach(word => { });
+    // console.log(quoteArr);
+
+    // setTimeout(() => displayQuote(), 2000);
 };
 
 //NEXT QUOTE
 const findNextQuote = (index = 0) => {
     quoteContent.innerHTML = quotes[index].quote;
     firstName.innerHTML = quotes[index].authorFirstName;
-    secondName.innerHTML = quotes[index].authorSecondName;
+    if (quotes[index].authorSecondName) {
+        secondName.innerHTML = quotes[index].authorSecondName;
+    }
     randIndex.textContent = `#${quotes[index].id}`;
-    console.log(randIndex)
+
 };
 
 
 
 //PREV QUOTE
 const findPrevQuote = (index) => {
-    quoteContent.innerHTML = quotes[index].quote;
+    console.log(index)
+    quoteContent.innerHTML = displayQuote(quotes[index].quote);
     firstName.innerHTML = quotes[index].authorFirstName;
-    secondName.innerHTML = quotes[index].authorSecondName;
+    if (quotes[index].authorSecondName) {
+        secondName.innerHTML = quotes[index].authorSecondName;
+    }
     randIndex.textContent = `#${quotes[index].id}`;
 }
 
