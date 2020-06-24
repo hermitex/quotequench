@@ -192,3 +192,4 @@ prev.onclick = findQuote;
 shareBtn.onclick = showShareButtons;
 
 
+
