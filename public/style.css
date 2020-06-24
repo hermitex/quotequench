@@ -89,9 +89,11 @@ body{
     border-radius: 50%;
     border: 1.5px solid green;
     cursor: pointer;
+    margin-top: 0.5rem;
+
 }
 .avatar-image:hover{
-    opacity: 0.5;
+    opacity: 0.8;
 
 }
 .quote-info {
