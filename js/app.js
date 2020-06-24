@@ -165,7 +165,7 @@ const findNextQuote = (index = 0) => {
     // avatar.backgroundImage = `url(${quotes[index].img})`
     avatarImg.src = quotes[index].img;
     avatarImg.alt = quotes[index].authorFirstName;
-    quoteContent.innerHTML = `<span style='font-size: 2.5rem; color: green;'>"</span>${quotes[index].quote}`;
+    quoteContent.innerHTML = `${quotes[index].quote}`;
     firstName.innerHTML = quotes[index].authorFirstName;
     if (quotes[index].authorSecondName) {
         secondName.innerHTML = quotes[index].authorSecondName;
@@ -179,7 +179,7 @@ const findNextQuote = (index = 0) => {
 //PREV QUOTE
 const findPrevQuote = (index) => {
     console.log(index)
-    quoteContent.innerHTML = quotes[index].quote;
+    quoteContent.innerHTML = `${quotes[index].quote}`;
     firstName.innerHTML = quotes[index].authorFirstName;
     if (quotes[index].authorSecondName) {
         secondName.innerHTML = quotes[index].authorSecondName;
