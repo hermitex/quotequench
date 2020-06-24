@@ -44,9 +44,7 @@ body{
     line-height: 3rem;
    
 }
-.superscript{
 
-}
 .container{
     width: 100%;
     height: 100%;
@@ -74,7 +72,7 @@ body{
     border-radius: 0.5rem;
     box-shadow: hsla(200% 50% 57 0.7) 0.1rem 0.1rem 0.1rem 0.1rem;
     background-color: #c3c3c3;
-    font-size: 1.5rem;
+    font-size: 1rem;
    
    
 }
@@ -128,6 +126,9 @@ small{
 }
 #yellow,#yellow-1, #first-name{
     color: yellow;
+}
+#first-name, #second-name{
+    font-size: 1rem;
 }
 .control{
     display: flex;
