@@ -203,6 +203,10 @@ i{
         z-index: 2;
         bottom: 0;
     }
+    .control button{
+       padding: 0.5rem;
+       font-size: 1.2rem;
+    }
 
 }
 
