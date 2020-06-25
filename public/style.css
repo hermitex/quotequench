@@ -58,9 +58,7 @@ body{
     text-align: left;   
     opacity: 0.9;
     height: 100%;
-    width: 100%;
-    
-    
+    width: 100%;    
 }
 .random-quote{
     font-size: 2rem;
@@ -88,16 +86,19 @@ body{
     border: 1.5px solid #66D3FA;
     cursor: pointer;
     margin-top: 0.5rem;
-    
+    opacity: 0.95;
 }
 .avatar-image:hover{
-    opacity: 0.8;
+    opacity: 1;
 
 }
 .quote-info {
 display: flex;
 background-color: #0a0a0a;
 justify-content: space-evenly;
+}
+#author:hover{
+    text-decoration: underline;
 }
 #rand-index{
     color: #ffffff;
@@ -119,6 +120,8 @@ small{
     width: 100%;
     justify-content: space-between;    
     padding: 0.1rem;
+    opacity: 0.82;
+
 }
 #close-share{
     background-color: red;
@@ -150,6 +153,11 @@ button{
     margin: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
+    opacity: 0.82;
+
+}
+button:hover, .share:hover{   
+opacity: 0.95;
 }
 .share-button{
     justify-content: space-evenly;
@@ -187,9 +195,22 @@ i{
 }
 
 @media only screen and (min-width:960px){
+ 
+    .avatar{              
+        margin-bottom: 2rem;
+    }
+    .avatar-image{
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        border: 1.5px solid #66D3FA;
+        cursor: pointer;
+        margin-top: 0.4rem;
+              
+    }
     .random-quote{
-        height: 80vh;
-        font-size: 2rem;
+        height: 83vh;
+        font-size: 1.5rem;
         line-height: 3rem;      
     }
     .random-quote p{
@@ -207,10 +228,13 @@ i{
        padding: 0.5rem;
        font-size: 1.2rem;
     }
-   .home-landing div{
- 
+   .home-landing div{ 
         font-size: 5rem;
-        line-height: 5.5rem;
+        line-height: 7rem;
+    }
+    .header{
+        font-size: 1rem;
+        padding: 0.2rem;
     }
 
 }

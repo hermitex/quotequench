@@ -23,13 +23,12 @@ const closeShare = document.querySelector('#close-share');
 
 // FETCH QUOTES
 const url = 'https://type.fit/api/quotes';
-// const quotes = [];
 const fetchQuotes = () => {
     return (fetch(url)
         .then(response => response.json())
         .then(fetchQuotes => {
+            // CLEANING & NORMALIZING FECH DATA
             fetchQuotes.forEach((eachQuote, i) => {
-
                 eachQuote.id = i + 101;
                 eachQuote.quote = eachQuote.text;
                 eachQuote.img = './images/personalities/wise-jimp.jpg';
@@ -43,19 +42,16 @@ const fetchQuotes = () => {
                         eachQuote.authorFirstName = authorName[0];
                     }
                 } else {
-
                     eachQuote.authorFirstName = 'Unknown';
                 }
                 delete eachQuote.author;
             });
-            // console.log(quotes)
 
             // MERGE QUOTES
             let newQuoteArray = quotes.concat(fetchQuotes);
 
             // TOTAL QUOTES
             totalQuotes.innerHTML = `Total Quotes: ${newQuoteArray.length}`;
-
 
             //QUOTE INDEX 
             const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
@@ -73,7 +69,6 @@ const fetchQuotes = () => {
                 }
             };
 
-
             //NEXT QUOTE
             const findNextQuote = index => {
                 avatarImg.src = newQuoteArray[index].img;
@@ -87,7 +82,7 @@ const fetchQuotes = () => {
 
             };
 
-
+            // INITIATE QUOTE SEARCH FUCNTION
             next.onclick = findQuote;
             prev.onclick = findQuote;
 
@@ -102,7 +97,6 @@ const fetchQuotes = () => {
             }
         })
         .catch(error => console.log(error)));
-
 };
 fetchQuotes();
 
@@ -130,7 +124,6 @@ const showShareButtons = () => {
 let avatarImg = document.createElement('img');
 avatarImg.classList.add('avatar-image');
 avatar.append(avatarImg);
-
 
 const quoteID = [];
 // HOME ACTIVATION
@@ -182,7 +175,6 @@ const superscript = date => {
 
 };
 
-
 // TIME FUNCTION
 const showTime = () => {
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -206,9 +198,6 @@ const showTime = () => {
 // FORMAT TIME FUNCTION
 const isLessThanTen = num => `${parseInt(num) < 10 ? '0' + num : num}`;
 time.onload = showTime();
-
-
-
 
 shareBtn.onclick = showShareButtons;
 
