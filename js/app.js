@@ -21,6 +21,92 @@ const shareBtn = document.querySelector('#share');
 const shareButtons = document.querySelector('.share-button');
 const closeShare = document.querySelector('#close-share');
 
+// FETCH QUOTES
+const url = 'https://type.fit/api/quotes';
+// const quotes = [];
+const fetchQuotes = () => {
+    return (fetch(url)
+        .then(response => response.json())
+        .then(fetchQuotes => {
+            fetchQuotes.forEach((eachQuote, i) => {
+
+                eachQuote.id = i + 101;
+                eachQuote.quote = eachQuote.text;
+                eachQuote.img = './images/personalities/wise-jimp.jpg';
+                delete eachQuote.text;
+                if (eachQuote.author !== null) {
+                    let authorName = eachQuote.author.split(' ');
+                    if (authorName.length >= 2) {
+                        eachQuote.authorFirstName = authorName[0];
+                        eachQuote.authorSecondName = authorName[1];
+                    } else if (authorName.length == 1) {
+                        eachQuote.authorFirstName = authorName[0];
+                    }
+                } else {
+
+                    eachQuote.authorFirstName = 'Unknown';
+                }
+                delete eachQuote.author;
+            });
+            // console.log(quotes)
+
+            // MERGE QUOTES
+            let newQuoteArray = quotes.concat(fetchQuotes);
+
+            // TOTAL QUOTES
+            totalQuotes.innerHTML = `Total Quotes: ${newQuoteArray.length}`;
+
+
+            //QUOTE INDEX 
+            const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
+
+            //QUOTE FILTER
+            const findQuote = event => {
+                const index = quoteIndex();
+                quoteID.push(index);
+
+                if (event.target.classList.contains('next')) {
+                    findNextQuote(index)
+                }
+                else if (event.target.classList.contains('previous')) {
+                    findPrevQuote(index)
+                }
+            };
+
+
+            //NEXT QUOTE
+            const findNextQuote = index => {
+                avatarImg.src = newQuoteArray[index].img;
+                avatarImg.alt = newQuoteArray[index].authorFirstName;
+                quoteContent.innerHTML = `${newQuoteArray[index].quote}`;
+                firstName.innerHTML = newQuoteArray[index].authorFirstName;
+                if (newQuoteArray[index].authorSecondName) {
+                    secondName.innerHTML = newQuoteArray[index].authorSecondName;
+                }
+                randIndex.textContent = `#${index}`;
+
+            };
+
+
+            next.onclick = findQuote;
+            prev.onclick = findQuote;
+
+            //PREV QUOTE
+            const findPrevQuote = (index) => {
+                quoteContent.innerHTML = `${newQuoteArray[index].quote}`;
+                firstName.innerHTML = newQuoteArray[index].authorFirstName;
+                if (newQuoteArray[index].authorSecondName) {
+                    secondName.innerHTML = newQuoteArray[index].authorSecondName;
+                }
+                randIndex.textContent = `#${newQuoteArray[index].id}`;
+            }
+        })
+        .catch(error => console.log(error)));
+
+};
+fetchQuotes();
+
+
 // share
 const showShareButtons = () => {
     if (shareButtons.classList.contains('flex')) {
@@ -39,17 +125,6 @@ const showShareButtons = () => {
         shareBtn.style.fontWeight = 'bold';
     }
 };
-
-// close share buttons
-// const closeShareButtons = () => {
-//     if (closeShare.classList.contains('flex')) {
-//         closeShare.classList.add('none');
-//         closeShare.classList.remove('flex');
-//     } else if (closeShare.classList.contains('none')) {
-//         closeShare.classList.add('flex');
-//         closeShare.classList.remove('none');
-//     }
-// }
 
 // create avatar
 let avatarImg = document.createElement('img');
@@ -132,63 +207,9 @@ const showTime = () => {
 const isLessThanTen = num => `${parseInt(num) < 10 ? '0' + num : num}`;
 time.onload = showTime();
 
-// TOTAL QUOTES
-totalQuotes.innerHTML = `Total Quotes: ${quotes.length}`;
-
-
-//QUOTE INDEX 
-const quoteIndex = () => Math.floor(Math.random() * quotes.length);
-
-//QUOTE FILTER
-const findQuote = (event) => {
-    const index = quoteIndex();
-    quoteID.push(index);
-
-    if (event.target.classList.contains('next')) {
-        findNextQuote(index)
-    }
-    else if (event.target.classList.contains('previous')) {
-        findPrevQuote(index)
-    }
-};
-// DISPLAY QUOTE
-const displayQuote = (quote) => {
-    let quoteArr = quote.trim().split(' ');
-    return quoteArr.forEach(word => { });
-    // console.log(quoteArr);
-
-    // setTimeout(() => displayQuote(), 2000);
-};
-
-//NEXT QUOTE
-const findNextQuote = (index = 0) => {
-    // avatar.backgroundImage = `url(${quotes[index].img})`
-    avatarImg.src = quotes[index].img;
-    avatarImg.alt = quotes[index].authorFirstName;
-    quoteContent.innerHTML = `${quotes[index].quote}`;
-    firstName.innerHTML = quotes[index].authorFirstName;
-    if (quotes[index].authorSecondName) {
-        secondName.innerHTML = quotes[index].authorSecondName;
-    }
-    randIndex.textContent = `#${quotes[index].id}`;
-
-};
 
 
 
-//PREV QUOTE
-const findPrevQuote = (index) => {
-    console.log(index)
-    quoteContent.innerHTML = `${quotes[index].quote}`;
-    firstName.innerHTML = quotes[index].authorFirstName;
-    if (quotes[index].authorSecondName) {
-        secondName.innerHTML = quotes[index].authorSecondName;
-    }
-    randIndex.textContent = `#${quotes[index].id}`;
-}
-
-next.onclick = findQuote;
-prev.onclick = findQuote;
 shareBtn.onclick = showShareButtons;
 
 
