@@ -249,8 +249,8 @@ pronuonce.onclick = function () {
             speach.voice = voices[i];
         }
     }
-    speach.pitch = 1;
-    speach.rate = 1;
+    speach.pitch = 0.01;
+    speach.rate = 0.8;
     synth.speak(speach);
 
     speach.onstart = function (event) {
