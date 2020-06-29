@@ -60,6 +60,13 @@ body{
     height: 100%;
     width: 100%;    
 }
+#chimp{
+margin: auto;
+/* margin-top: -5rem; */
+padding: 1rem;
+border-radius: 1.5rem;
+z-index: 10;
+}
 /* speach */
 
 .blink_me {
@@ -102,6 +109,7 @@ body{
     height: 7rem;
     width: 7rem;
     margin: 0 auto;
+    display: none;
 }
 .avatar-image{
     height: 100px;
@@ -139,14 +147,21 @@ small{
     color: #ffffff;
     border-radius: 5px;
 }
+
 .share{
-    display: flex;  
+    display: flex;
     width: 100%;
     justify-content: space-between;    
     padding: 0.1rem;
     opacity: 0.82;
 
 }
+/* .closed{
+    display: none;
+}
+.open{
+    display: flex;  
+} */
 #close-share{
     background-color: red;
     color: #fff;

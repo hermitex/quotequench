@@ -64,6 +64,15 @@ const fetchQuotes = () => {
 
             //QUOTE FILTER
             const findQuote = event => {
+                avatar.style.display = 'block';
+                // if (shareBtn.classList.contains('close')) {
+                //     shareBtn.classList.remove('close')
+                //     shareBtn.classList.add('open')
+                // } else {
+                //     shareBtn.classList.add('close')
+                //     shareBtn.classList.remove('open')
+                // }
+                shareBtn.style.display = 'block';
                 const index = quoteIndex();
                 quoteID.push(index);
 
