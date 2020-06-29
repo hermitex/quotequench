@@ -263,7 +263,7 @@ pronuonce.onclick = function () {
         pronuonce.classList.remove('blink_me')
     }
 
-    wordInput.blur();
+
 }
 
 getVoices();
