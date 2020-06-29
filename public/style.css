@@ -60,6 +60,30 @@ body{
     height: 100%;
     width: 100%;    
 }
+/* speach */
+
+.blink_me {
+    color: yellow !important;
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {
+    90% {
+      opacity: 0;
+    }
+  }
+
+  .no_blink {
+    color: green !important;
+    animation: none;
+  }
+  
+  @keyframes blinker {
+    90% {
+      opacity: 0;
+    }
+  }
+  /* speach */
 .random-quote{
     font-size: 2rem;
     line-height: 1.5rem;
