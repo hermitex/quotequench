@@ -241,8 +241,8 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 pronuonce.onclick = function () {
 
-
     var speach = new SpeechSynthesisUtterance(quoteContent.innerHTML);
+    console.log(quoteContent.innerHTML)
     var selectedOption = selectVoice.selectedOptions[0].getAttribute('data-name');
     for (let i = 0; i < voices.length; i++) {
         if (voices[i].name === selectedOption) {
@@ -250,7 +250,7 @@ pronuonce.onclick = function () {
         }
     }
     speach.pitch = 1;
-    speach.rate = 0.8;
+    speach.rate = 0.9;
     synth.speak(speach);
 
     speach.onstart = function (event) {
