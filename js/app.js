@@ -23,7 +23,7 @@ const closeShare = document.querySelector("#close-share");
 
 // FETCH QUOTES
 const url = "https://type.fit/api/quotes";
-const fetchQuotes = async () => {
+export const fetchQuotes = async () => {
   try {
     const response = await fetch(url);
     const fetchQuotes = await response.json();
