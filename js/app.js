@@ -207,4 +207,53 @@ const showTime = () => {
 const isLessThanTen = (num) => `${parseInt(num) < 10 ? "0" + num : num}`;
 time.onload = showTime();
 
+// SPEACH
+const getVoices = () => {
+  voices = synth.getVoices();
+  voices.forEach((voice) => {
+    let optionList = document.createElement("option");
+    optionList.textContent = `${voice.name} (${voice.lang})`;
+
+    if (voice.default) {
+      optionList.textContent += " -- DEFAULT";
+    }
+
+    optionList.setAttribute("data-lang", voice.lang);
+    optionList.setAttribute("data-name", voices.name);
+    selectVoice.appendChild(optionList);
+  });
+};
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = getVoices;
+}
+
+// console.log(voices)
+
+pronuonce.onclick = function () {
+  var speach = new SpeechSynthesisUtterance(quoteContent.innerHTML);
+  console.log(quoteContent.innerHTML);
+  var selectedOption = selectVoice.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
+      speach.voice = voices[i];
+    }
+  }
+  speach.pitch = 1;
+  speach.rate = 0.9;
+  synth.speak(speach);
+
+  speach.onstart = function (event) {
+    pronuonce.classList.add("blink_me");
+    pronuonce.classList.remove("no_blink");
+  };
+
+  speach.onend = function (event) {
+    pronuonce.classList.add("no_blink");
+    pronuonce.classList.remove("blink_me");
+  };
+};
+
+getVoices();
+
+time.onload = showTime();
 shareBtn.onclick = showShareButtons;
