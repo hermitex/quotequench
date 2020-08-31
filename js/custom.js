@@ -55,6 +55,15 @@ export const fetchQuotes = async () => {
     let newQuoteArray = quotes.concat(fetchQuotes);
     let output = "";
 
+    const findName = (index) => {
+      if (newQuoteArray[index].authorSecondName) {
+        return newQuoteArray[index].authorSecondName;
+      } else {
+        console.log(newQuoteArray[index].quote);
+        return "";
+      }
+    };
+
     getQuoteBtn.addEventListener("click", (e) => {
       //QUOTE INDEX
       const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
@@ -76,9 +85,7 @@ export const fetchQuotes = async () => {
                 <button id="author"> <span id="by">By</span> <span id="first-name">${
                   newQuoteArray[quoteIndex()].authorFirstName
                 }</span> <span
-                        id="second-name">${
-                          newQuoteArray[quoteIndex()].authorSecondName
-                        }</span>
+                        id="second-name">${findName(quoteIndex())}</span>
                 </button>
                 <button class="share-btn"></button>
 
@@ -196,4 +203,4 @@ const isLessThanTen = (num) => `${parseInt(num) < 10 ? "0" + num : num}`;
 time.onload = showTime();
 
 time.onload = showTime();
-getQuoteBtn.onclick = showShareButtons;
+// getQuoteBtn.onclick = showShareButtons;
