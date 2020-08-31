@@ -1,0 +1,244 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/eat-2834549_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.wrapper {
+  margin-top: 7rem;
+  width: 100vw;
+}
+.header {
+  top: 0;
+  position: fixed;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  z-index: 2;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  width: 100%;
+  font-size: 0.5rem;
+  opacity: 0.85;
+  border-bottom: 1px solid #66d3fa;
+}
+form {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: #c3c3c3;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+form div {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+form div label {
+  padding: 0.5rem;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0a0a0a;
+  opacity: 0.85;
+  margin: 0 auto;
+  color: #ffffff;
+  line-height: 3rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-content: center;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.random-quote {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  line-height: 1.5rem;
+  padding: 1rem;
+  border: 1.2px solid #66d3fa;
+  border-radius: 0.5rem;
+  background-color: #c3c3c3;
+  font-size: 1rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #0a0a0a;
+}
+.random-quote p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.avatar {
+  height: 7rem;
+  width: 7rem;
+  margin: 0 auto;
+}
+.avatar-image {
+  height: 100px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1.5px solid #66d3fa;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  opacity: 0.95;
+}
+.avatar-image:hover {
+  opacity: 1;
+}
+.quote-info {
+  display: flex;
+  background-color: #0a0a0a;
+  justify-content: space-evenly;
+}
+
+#rand-index {
+  color: #ffffff;
+}
+.total-quotes {
+  font-size: 1.5rem;
+  color: yellow;
+}
+small {
+  display: block;
+  font-size: 1.2rem;
+  background-color: #0a0a0a;
+  padding: 0.1rem;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.share {
+  display: flex;
+  align-content: center;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  opacity: 0.82;
+}
+#close-share {
+  background-color: red;
+  color: #fff;
+}
+#yellow,
+#yellow-1,
+#first-name {
+  color: yellow;
+}
+#first-name,
+#second-name {
+  font-size: 1rem;
+}
+
+button {
+  background-color: green;
+  opacity: 0.95;
+  padding: 0.3rem;
+  outline: none;
+  border: 1px solid #66d3fa;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.82;
+}
+button:hover,
+.share:hover {
+  opacity: 0.95;
+}
+.share-button {
+  justify-content: space-evenly;
+  text-align: center;
+}
+#share {
+  padding: 0.9rem;
+}
+.none {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+.share-button button {
+  background-color: #0a0a0a;
+}
+i {
+  color: #66d3fa;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.disappear {
+  display: none;
+  z-index: -10;
+}
+
+@media only screen and (min-width: 960px) {
+  .avatar {
+    margin-bottom: 2rem;
+  }
+  .avatar-image {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 1.5px solid #66d3fa;
+    cursor: pointer;
+    margin-top: 0.4rem;
+  }
+  .random-quote {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .random-quote p {
+    margin-bottom: 0.5rem;
+  }
+  .control {
+    justify-content: space-around;
+    bottom: 0;
+  }
+  .control button {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .home-landing div {
+    font-size: 5rem;
+    line-height: 7rem;
+  }
+  .header {
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+}
