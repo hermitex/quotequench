@@ -36,7 +36,7 @@ body {
   border-bottom: 1px solid #66d3fa;
 }
 .search {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-bottom: 1rem;
   background-color: #c3c3c3;
@@ -96,7 +96,7 @@ body {
 }
 .random-quote {
   height: 100%;
-  width: 80%;
+  width: 90%;
   margin: auto;
   line-height: 1.5rem;
   padding: 1rem;
@@ -227,9 +227,13 @@ i {
     cursor: pointer;
     margin-top: 0.4rem;
   }
+  .search {
+    width: 80%;
+  }
   .random-quote {
     font-size: 1.5rem;
     line-height: 3rem;
+    width: 80%;
   }
   .random-quote p {
     margin-bottom: 0.5rem;

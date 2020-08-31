@@ -24,6 +24,7 @@ const numOfQuote = document.querySelector("#quote-search");
 const getQuoteBtn = document.querySelector("#get-quote");
 const content = document.querySelector(".wrapper");
 const searchBar = document.querySelector(".search");
+console.log(shareButtons);
 // FETCH QUOTES
 const url = "https://type.fit/api/quotes";
 export const fetchQuotes = async () => {
@@ -71,7 +72,6 @@ export const fetchQuotes = async () => {
       for (let i = 0; i < parseInt(numOfQuote.value); i++) {
         var card = document.createElement("div");
         let randomQuote = newQuoteArray[quoteIndex()];
-        console.log(randomQuote);
         output += `<div class="card">
         <div class="random-quote">
             <div class="avatar">         
