@@ -55,11 +55,10 @@ export const fetchQuotes = async () => {
     let newQuoteArray = quotes.concat(fetchQuotes);
     let output = "";
 
-    const findName = (index) => {
-      if (newQuoteArray[index].authorSecondName) {
-        return newQuoteArray[index].authorSecondName;
+    const isAuthorNameValid = (authorName) => {
+      if (authorName) {
+        return authorName;
       } else {
-        console.log(newQuoteArray[index].quote);
         return "";
       }
     };
@@ -71,21 +70,25 @@ export const fetchQuotes = async () => {
 
       for (let i = 0; i < parseInt(numOfQuote.value); i++) {
         var card = document.createElement("div");
+        let randomQuote = newQuoteArray[quoteIndex()];
+        console.log(randomQuote);
         output += `<div class="card">
         <div class="random-quote">
             <div class="avatar">         
-              <img class='avatar-image' src=${newQuoteArray[quoteIndex()].img}>
+              <img class='avatar-image' src=${randomQuote.img}>
             </div>
 
             <p>
-            ${newQuoteArray[quoteIndex()].quote}
+            ${randomQuote.quote}
             </p>
             <hr><br>
             <div class="share">
-                <button id="author"> <span id="by">By</span> <span id="first-name">${
-                  newQuoteArray[quoteIndex()].authorFirstName
-                }</span> <span
-                        id="second-name">${findName(quoteIndex())}</span>
+                <button id="author"> <span id="by">By</span> <span id="first-name">${isAuthorNameValid(
+                  randomQuote.authorFirstName
+                )}</span> <span
+                        id="second-name">${isAuthorNameValid(
+                          randomQuote.authorSecondName
+                        )}</span>
                 </button>
                 <button class="share-btn"></button>
 
