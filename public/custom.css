@@ -52,7 +52,7 @@ form div {
   text-align: center;
 }
 form div label {
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 form div input {
   max-height: 2rem;
