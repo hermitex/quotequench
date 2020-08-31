@@ -147,6 +147,7 @@ small {
   z-index: 2;
   display: flex;
   margin: auto;
+  margin-bottom: 1rem;
 }
 button {
   background-color: green;
