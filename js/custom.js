@@ -17,14 +17,13 @@ const overlay = document.querySelector(".overlay");
 const currentDate = document.querySelector(".date");
 const close = document.querySelector("#close");
 const urge = document.querySelector("#urge");
-const shareBtn = document.querySelector("#share");
-const shareButtons = document.querySelector(".share-button");
 const closeShare = document.querySelector("#close-share");
 const numOfQuote = document.querySelector("#quote-search");
 const getQuoteBtn = document.querySelector("#get-quote");
 const content = document.querySelector(".wrapper");
 const searchBar = document.querySelector(".search");
-console.log(shareButtons);
+let shareBtn = "";
+let shareButtons = "";
 // FETCH QUOTES
 const url = "https://type.fit/api/quotes";
 export const fetchQuotes = async () => {
@@ -55,7 +54,6 @@ export const fetchQuotes = async () => {
     // MERGE QUOTES
     let newQuoteArray = quotes.concat(fetchQuotes);
     let output = "";
-
     const isAuthorNameValid = (authorName) => {
       if (authorName) {
         return authorName;
@@ -105,6 +103,10 @@ export const fetchQuotes = async () => {
       card.innerHTML = output;
       searchBar.parentElement.insertBefore(card, searchBar.nextElementSibling);
       output = "";
+      shareBtn = document.querySelector(".share-btn");
+      shareButtons = document.querySelector(".share-button");
+      console.log(shareBtn, shareButtons);
+      showShareButtons(shareBtn, shareButtons);
     });
   } catch (error) {
     return console.log(error);
@@ -113,7 +115,9 @@ export const fetchQuotes = async () => {
 fetchQuotes();
 
 // share
-const showShareButtons = () => {
+
+const showShareButtons = (shareBtn, shareButtons) => {
+  console.log(shareBtn, shareButtons);
   if (shareButtons.classList.contains("flex")) {
     shareButtons.classList.add("none");
     shareButtons.classList.remove("flex");
