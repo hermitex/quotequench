@@ -54,6 +54,9 @@ form div {
 form div label {
   padding: 0.5rem;
 }
+form div input {
+  max-height: 2rem;
+}
 .overlay {
   display: flex;
   flex-direction: column;
