@@ -20,7 +20,10 @@ const urge = document.querySelector("#urge");
 const shareBtn = document.querySelector("#share");
 const shareButtons = document.querySelector(".share-button");
 const closeShare = document.querySelector("#close-share");
-
+const numOfQuote = document.querySelector("#quote-search");
+const getQuoteBtn = document.querySelector("#get-quote");
+const content = document.querySelector(".wrapper");
+const searchBar = document.querySelector(".search");
 // FETCH QUOTES
 const url = "https://type.fit/api/quotes";
 export const fetchQuotes = async () => {
@@ -50,48 +53,49 @@ export const fetchQuotes = async () => {
 
     // MERGE QUOTES
     let newQuoteArray = quotes.concat(fetchQuotes);
+    let output = "";
 
-    // TOTAL QUOTES
-    totalQuotes.innerHTML = `Total Quotes: ${newQuoteArray.length}`;
+    getQuoteBtn.addEventListener("click", (e) => {
+      //QUOTE INDEX
+      const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
+      e.preventDefault();
 
-    //QUOTE INDEX
-    const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
+      for (let i = 0; i < parseInt(numOfQuote.value); i++) {
+        var card = document.createElement("div");
+        output += `<div class="card">
+        <div class="random-quote">
+            <div class="avatar">         
+              <img class='avatar-image' src=${newQuoteArray[quoteIndex()].img}>
+            </div>
 
-    //QUOTE FILTER
-    const findQuote = (event_1) => {
-      const index = quoteIndex();
-      quoteID.push(index);
+            <p>
+            ${newQuoteArray[quoteIndex()].quote}
+            </p>
+            <hr><br>
+            <div class="share">
+                <button id="author"> <span id="by">By</span> <span id="first-name">${
+                  newQuoteArray[quoteIndex()].authorFirstName
+                }</span> <span
+                        id="second-name">${
+                          newQuoteArray[quoteIndex()].authorSecondName
+                        }</span>
+                </button>
+                <button class="share-btn"></button>
 
-      if (event_1.target.classList.contains("next")) {
-        findNextQuote(index);
-      } else if (event_1.target.classList.contains("previous")) {
-        findPrevQuote(index);
+            </div>
+            <div class="share-button none">
+                <button> <a href="http://"></a><i class="fab fa-facebook-square"></i> </button>
+                <button><a href="http://"></a><i class="fab fa-twitter-square"></i></button>
+                <button><a href="http://"></a><i class="fab fa-instagram-square"></i></button>
+
+            </div>
+        </div>
+    </div>`;
       }
-    };
-
-    //NEXT QUOTE
-    const findNextQuote = (index_3) => {
-      avatarImg.src = newQuoteArray[index_3].img;
-      avatarImg.alt = newQuoteArray[index_3].authorFirstName;
-      quoteContent.innerHTML = `${newQuoteArray[index_3].quote}`;
-      firstName.innerHTML = newQuoteArray[index_3].authorFirstName;
-      if (newQuoteArray[index_3].authorSecondName) {
-        secondName.innerHTML = newQuoteArray[index_3].authorSecondName;
-      } else {
-        secondName.innerHTML = "";
-      }
-      randIndex.textContent = `#${index_3}`;
-    };
-
-    //PREV QUOTE
-    const findPrevQuote = (index_4) => {
-      quoteContent.innerHTML = `${newQuoteArray[index_4].quote}`;
-      firstName.innerHTML = newQuoteArray[index_4].authorFirstName;
-      if (newQuoteArray[index_4].authorSecondName) {
-        secondName.innerHTML = newQuoteArray[index_4].authorSecondName;
-      }
-      randIndex.textContent = `#${newQuoteArray[index_4].id}`;
-    };
+      card.innerHTML = output;
+      searchBar.parentElement.insertBefore(card, searchBar.nextElementSibling);
+      output = "";
+    });
   } catch (error) {
     return console.log(error);
   }
@@ -116,11 +120,6 @@ const showShareButtons = () => {
     shareBtn.style.fontWeight = "bold";
   }
 };
-
-// create avatar
-let avatarImg = document.createElement("img");
-avatarImg.classList.add("avatar-image");
-avatar.append(avatarImg);
 
 const quoteID = [];
 // HOME ACTIVATION
@@ -189,11 +188,6 @@ const showTime = () => {
   time.innerHTML = `<h1>${isLessThanTen(hour)} : ${isLessThanTen(
     minutes
   )} : <span style="color: green;">${isLessThanTen(seconds)}</span></h1>`;
-  time1.innerHTML = `<h1>${isLessThanTen(hour)} : ${isLessThanTen(
-    minutes
-  )} : <span style="color: green;">${isLessThanTen(seconds)}</span></h1>`;
-  currentDate.innerHTML = `${day}, ${date} ${month} ${year}`;
-
   setTimeout(() => showTime(), 1000);
 };
 
@@ -201,53 +195,5 @@ const showTime = () => {
 const isLessThanTen = (num) => `${parseInt(num) < 10 ? "0" + num : num}`;
 time.onload = showTime();
 
-// SPEACH
-// const getVoices = () => {
-//   voices = synth.getVoices();
-//   voices.forEach((voice) => {
-//     let optionList = document.createElement("option");
-//     optionList.textContent = `${voice.name} (${voice.lang})`;
-
-//     if (voice.default) {
-//       optionList.textContent += " -- DEFAULT";
-//     }
-
-//     optionList.setAttribute("data-lang", voice.lang);
-//     optionList.setAttribute("data-name", voices.name);
-//     selectVoice.appendChild(optionList);
-//   });
-// };
-// if (speechSynthesis.onvoiceschanged !== undefined) {
-//   speechSynthesis.onvoiceschanged = getVoices;
-// }
-
-// console.log(voices)
-
-// pronuonce.onclick = function () {
-//   var speach = new SpeechSynthesisUtterance(quoteContent.innerHTML);
-//   console.log(quoteContent.innerHTML);
-//   var selectedOption = selectVoice.selectedOptions[0].getAttribute("data-name");
-//   for (let i = 0; i < voices.length; i++) {
-//     if (voices[i].name === selectedOption) {
-//       speach.voice = voices[i];
-//     }
-//   }
-//   speach.pitch = 1;
-//   speach.rate = 0.9;
-//   synth.speak(speach);
-
-//   speach.onstart = function (event) {
-//     pronuonce.classList.add("blink_me");
-//     pronuonce.classList.remove("no_blink");
-//   };
-
-//   speach.onend = function (event) {
-//     pronuonce.classList.add("no_blink");
-//     pronuonce.classList.remove("blink_me");
-//   };
-// };
-
-// getVoices();
-
 time.onload = showTime();
-shareBtn.onclick = showShareButtons;
+getQuoteBtn.onclick = showShareButtons;

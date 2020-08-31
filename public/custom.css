@@ -35,7 +35,7 @@ body {
   opacity: 0.85;
   border-bottom: 1px solid #66d3fa;
 }
-form {
+.search {
   width: 90%;
   margin: auto;
   margin-bottom: 1rem;
@@ -43,7 +43,7 @@ form {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-form div {
+.search div {
   width: 100%;
   margin: auto;
   display: flex;
@@ -51,10 +51,10 @@ form div {
   justify-content: center;
   text-align: center;
 }
-form div label {
+.search div label {
   /* padding: 0.5rem; */
 }
-form div input {
+.search div input {
   max-height: 2rem;
 }
 .overlay {
@@ -186,7 +186,7 @@ button:hover,
   justify-content: space-evenly;
   text-align: center;
 }
-#share {
+.share-btn {
   padding: 0.9rem;
 }
 .none {
