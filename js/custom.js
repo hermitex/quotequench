@@ -24,6 +24,7 @@ const content = document.querySelector(".wrapper");
 const searchBar = document.querySelector(".search");
 let shareBtn = "";
 let shareButtons = "";
+
 // FETCH QUOTES
 const url = "https://type.fit/api/quotes";
 export const fetchQuotes = async () => {
@@ -54,6 +55,7 @@ export const fetchQuotes = async () => {
     // MERGE QUOTES
     let newQuoteArray = quotes.concat(fetchQuotes);
     let output = "";
+
     const isAuthorNameValid = (authorName) => {
       if (authorName) {
         return authorName;
@@ -63,12 +65,46 @@ export const fetchQuotes = async () => {
     };
 
     getQuoteBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
       //QUOTE INDEX
       const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
-      e.preventDefault();
 
       for (let i = 0; i < parseInt(numOfQuote.value); i++) {
         var card = document.createElement("div");
+        var shareControlBtn = document.createElement("button");
+        shareControlBtn.classList.add("share-btn");
+        var shareControlBtns = document.createElement("div");
+        var shareControlBtn1 = document.createElement("button");
+        var shareControlBtn2 = document.createElement("button");
+        var shareControlBtn3 = document.createElement("button");
+        var shareControlLink1 = document.createElement("a");
+        var shareControlLink2 = document.createElement("a");
+        var shareControlLink3 = document.createElement("a");
+        var shareControlIcon1 = document.createElement("i");
+        var shareControlIcon2 = document.createElement("i");
+        var shareControlIcon3 = document.createElement("i");
+        shareControlLink1.setAttribute("href", "http://twitter.com");
+        shareControlLink2.setAttribute("href", "http://facebook.com");
+        shareControlLink3.setAttribute("href", "http://instagram.com");
+        shareControlIcon1.classList.add("fab");
+        shareControlIcon2.classList.add("fa-facebook-square");
+        shareControlIcon3.classList.add("fab");
+        shareControlIcon1.classList.add("fa-twitter-square");
+        shareControlIcon2.classList.add("fab");
+        shareControlIcon3.classList.add("fa-instagram-square");
+        shareControlBtns.classList.add("share-button");
+        shareControlBtns.classList.add("none");
+        shareControlLink1.appendChild(shareControlIcon1);
+        shareControlLink2.appendChild(shareControlIcon2);
+        shareControlLink3.appendChild(shareControlIcon3);
+        shareControlBtn1.appendChild(shareControlLink1);
+        shareControlBtn2.appendChild(shareControlLink2);
+        shareControlBtn3.appendChild(shareControlLink3);
+        shareControlBtns.appendChild(shareControlBtn1);
+        shareControlBtns.appendChild(shareControlBtn2);
+        shareControlBtns.appendChild(shareControlBtn3);
+
         let randomQuote = newQuoteArray[quoteIndex()];
         output += `<div class="card">
         <div class="random-quote">
@@ -76,7 +112,7 @@ export const fetchQuotes = async () => {
               <img class='avatar-image' src=${randomQuote.img}>
             </div>
 
-            <p>
+            <p>            
             ${randomQuote.quote}
             </p>
             <hr><br>
@@ -88,52 +124,57 @@ export const fetchQuotes = async () => {
                           randomQuote.authorSecondName
                         )}</span>
                 </button>
-                ${showShareButtons()}
+              <!-- <button class="share-btn"></button> -->
 
-            </div>     
+            </div>          
             <div class="share-button none">
                 <button> <a href="http://"></a><i class="fab fa-facebook-square"></i> </button>
                 <button><a href="http://"></a><i class="fab fa-twitter-square"></i></button>
                 <button><a href="http://"></a><i class="fab fa-instagram-square"></i></button>
-
-            </div>       
+            </div>
         </div>
     </div>`;
       }
       card.innerHTML = output;
       searchBar.parentElement.insertBefore(card, searchBar.nextElementSibling);
+
+      const authorDiv = document.querySelector("#author");
       output = "";
-      // shareBtn = document.querySelector(".share-btn");
-      // shareButtons = document.querySelector(".share-button");
-      // console.log(shareBtn, shareButtons);
-      // showShareButtons(shareBtn, shareButtons);
+
+      const showShareButtons = (shareBtn, shareButtons) => {
+        if (shareButtons.classList.contains("flex")) {
+          shareButtons.classList.add("flex");
+          shareButtons.classList.remove("none");
+          shareBtn.innerHTML = "X";
+          console.log(shareBtn, shareButtons);
+          shareBtn.style.backgroundColor = "red";
+          shareBtn.style.width = "3rem";
+          shareBtn.style.fontWeight = "bold";
+          authorDiv.parentElement.insertBefore(
+            shareControlBtn,
+            authorDiv.nextElementSibling
+          );
+        } else if (shareButtons.classList.contains("none")) {
+          shareButtons.classList.add("none");
+          shareButtons.classList.remove("flex");
+          shareBtn.innerHTML = "Share";
+          shareBtn.style.backgroundColor = "green";
+          shareBtn.style.width = "auto";
+          shareBtn.style.fontWeight = "normal";
+          authorDiv.parentElement.insertBefore(
+            shareControlBtn,
+            authorDiv.nextElementSibling
+          );
+          console.log(authorDiv.parentElement);
+        }
+      };
+      showShareButtons(shareControlBtn, shareControlBtns);
     });
   } catch (error) {
     return console.log(error);
   }
 };
 fetchQuotes();
-
-// share
-
-const showShareButtons = (shareBtnElement) => {
-  console.log(shareBtnElement);
-  if (shareBtnElement.classList.contains("flex")) {
-    shareButtons.classList.add("none");
-    shareButtons.classList.remove("flex");
-    shareBtn.innerHTML = "Share";
-    shareBtn.style.backgroundColor = "green";
-    shareBtn.style.width = "auto";
-    shareBtn.style.fontWeight = "normal";
-  } else if (shareButtons.classList.contains("none")) {
-    shareButtons.classList.add("flex");
-    shareButtons.classList.remove("none");
-    shareBtn.innerHTML = "X";
-    shareBtn.style.backgroundColor = "red";
-    shareBtn.style.width = "3rem";
-    shareBtn.style.fontWeight = "bold";
-  }
-};
 
 const quoteID = [];
 // HOME ACTIVATION
