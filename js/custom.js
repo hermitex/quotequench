@@ -24,7 +24,7 @@ const content = document.querySelector(".wrapper");
 const searchBar = document.querySelector(".search");
 let shareBtn = "";
 let shareButtons = "";
-
+var card = document.createElement("div");
 // FETCH QUOTES
 const url = "https://type.fit/api/quotes";
 export const fetchQuotes = async () => {
@@ -71,7 +71,6 @@ export const fetchQuotes = async () => {
       const quoteIndex = () => Math.floor(Math.random() * newQuoteArray.length);
 
       for (let i = 0; i < parseInt(numOfQuote.value); i++) {
-        var card = document.createElement("div");
         var shareControlBtn = document.createElement("button");
         shareControlBtn.classList.add("share-btn");
         var shareControlBtns = document.createElement("div");
@@ -135,11 +134,17 @@ export const fetchQuotes = async () => {
         </div>
     </div>`;
       }
-      card.innerHTML = output;
+      if (card) {
+        card.innerHTML = "";
+        card.innerHTML = output;
+        output = "";
+      } else {
+        console.log("card is empty");
+      }
+
       searchBar.parentElement.insertBefore(card, searchBar.nextElementSibling);
 
       const authorDiv = document.querySelector("#author");
-      output = "";
 
       const showShareButtons = (shareBtn, shareButtons) => {
         if (shareButtons.classList.contains("flex")) {
@@ -191,6 +196,7 @@ close.addEventListener("click", () => {
   container.style.display = "none";
   container.style.height = "0";
   urge.textContent = "Hey 😊 you can always come back for more 😉";
+  card.innerHTML = "";
 });
 
 // GREETING FUNCTION
