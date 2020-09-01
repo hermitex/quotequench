@@ -88,25 +88,25 @@ export const fetchQuotes = async () => {
                           randomQuote.authorSecondName
                         )}</span>
                 </button>
-                <button class="share-btn"></button>
+                ${showShareButtons()}
 
-            </div>
+            </div>     
             <div class="share-button none">
                 <button> <a href="http://"></a><i class="fab fa-facebook-square"></i> </button>
                 <button><a href="http://"></a><i class="fab fa-twitter-square"></i></button>
                 <button><a href="http://"></a><i class="fab fa-instagram-square"></i></button>
 
-            </div>
+            </div>       
         </div>
     </div>`;
       }
       card.innerHTML = output;
       searchBar.parentElement.insertBefore(card, searchBar.nextElementSibling);
       output = "";
-      shareBtn = document.querySelector(".share-btn");
-      shareButtons = document.querySelector(".share-button");
-      console.log(shareBtn, shareButtons);
-      showShareButtons(shareBtn, shareButtons);
+      // shareBtn = document.querySelector(".share-btn");
+      // shareButtons = document.querySelector(".share-button");
+      // console.log(shareBtn, shareButtons);
+      // showShareButtons(shareBtn, shareButtons);
     });
   } catch (error) {
     return console.log(error);
@@ -116,9 +116,9 @@ fetchQuotes();
 
 // share
 
-const showShareButtons = (shareBtn, shareButtons) => {
-  console.log(shareBtn, shareButtons);
-  if (shareButtons.classList.contains("flex")) {
+const showShareButtons = (shareBtnElement) => {
+  console.log(shareBtnElement);
+  if (shareBtnElement.classList.contains("flex")) {
     shareButtons.classList.add("none");
     shareButtons.classList.remove("flex");
     shareBtn.innerHTML = "Share";
